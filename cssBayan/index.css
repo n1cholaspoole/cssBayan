@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Impact';
+    src: url(static/impact.ttf);
+    font-style: normal;
+    font-weight: 1000
+}
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Impact', Impact, serif;
+}
+
+.wrapper {
+    width: 40%;
+}
+
+.title {
+    display: flex;
+    font-size: 1.6rem;
+    align-self: flex-start;
+    padding: 1% 0 1% 0;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.ac_element {
+    border-top: 1px solid #c7c7c7;
+    display: flex;
+    flex-direction: column;
+    padding: 1% 0 1% 0;
+    background-color: transparent;
+}
+
+.ac_title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ac_title > p {
+    font-size: 1.2rem;
+    color: #308dff;
+}
+
+.ac_title > span {
+    display: flex;
+    justify-self: flex-end;
+}
+
+.ac_element > .ac_title > .plus {
+    display: block;
+}
+
+.ac_element > .ac_title > .ex {
+    display: none;
+}
+
+.ac_element > img {
+    visibility: collapse;
+    align-self: center;
+    width: 0;
+    height: 0;
+    transition: all .5s;
+}
+
+.ac_element:hover {
+    cursor: pointer;
+}
+
+.ac_element:hover > img {
+    visibility: visible;
+    width: 35%;
+    height: 35%;
+}
+
+.ac_element:hover > .ac_title > .plus {
+    display: none;
+}
+
+.ac_element:hover > .ac_title > .ex {
+    display: block;
+}
+
+.accordion:hover > .btn * p {
+    color: #000;
+}
+
+.btn:active {
+    background: rgba(48, 141, 255, 0.4);
+}
+
+#btn1, #btn2, #btn3, #btn4, #btn5 {
+    display: none;
+}
+
+#btn1:checked + label * p, #btn2:checked + label * p, #btn3:checked + label * p, #btn4:checked + label * p, #btn5:checked + label * p {
+    color: #000;
+}
+
+#btn1:checked + label * .plus, #btn2:checked + label * .plus, #btn3:checked + label * .plus, #btn4:checked + label * .plus, #btn5:checked + label * .plus {
+    display: none;
+}
+
+#btn1:checked + label * .ex, #btn2:checked + label * .ex, #btn3:checked + label * .ex, #btn4:checked + label * .ex, #btn5:checked + label * .ex {
+    display: block;
+}
+
+#btn1:checked + label * img, #btn2:checked + label * img, #btn3:checked + label * img, #btn4:checked + label * img, #btn5:checked + label * img {
+    visibility: visible;
+    width: 35%;
+    height: 35%;
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        width: 50%;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .ac_title > p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        width: 65%;
+    }
+
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .ac_title > p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .wrapper {
+        width: 95%;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .ac_title > p {
+        font-size: 0.8rem;
+    }
+}
