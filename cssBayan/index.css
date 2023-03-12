@@ -49,7 +49,7 @@ body {
 
 .ac_title > p {
     font-size: 1.2rem;
-    color: #308dff;
+    color: #339829;
 }
 
 .ac_title > span {
@@ -74,7 +74,7 @@ body {
 }
 
 .btn:active {
-    background: rgba(48, 141, 255, 0.4);
+    background: rgba(102, 220, 89, 0.42);
 }
 
 #btn1, #btn2, #btn3, #btn4, #btn5 {
