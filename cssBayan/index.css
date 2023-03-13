@@ -57,19 +57,15 @@ body {
     justify-self: flex-end;
 }
 
-.ac_element > .ac_title > .plus {
-    display: block;
-}
-
-.ac_element > .ac_title > .ex {
-    display: none;
-}
-
 .ac_element > img {
     visibility: collapse;
     align-self: center;
     width: 0;
     height: 0;
+    transition: all .5s;
+}
+
+.ac_element:hover > .ac_title > .plus {
     transition: all .5s;
 }
 
@@ -86,11 +82,7 @@ body {
 }
 
 #btn1:checked + label * .plus, #btn2:checked + label * .plus, #btn3:checked + label * .plus, #btn4:checked + label * .plus, #btn5:checked + label * .plus {
-    display: none;
-}
-
-#btn1:checked + label * .ex, #btn2:checked + label * .ex, #btn3:checked + label * .ex, #btn4:checked + label * .ex, #btn5:checked + label * .ex {
-    display: block;
+    transform: rotate(45deg);
 }
 
 #btn1:checked + label * img, #btn2:checked + label * img, #btn3:checked + label * img, #btn4:checked + label * img, #btn5:checked + label * img {
@@ -111,11 +103,7 @@ body {
     }
 
     .ac_element:hover > .ac_title > .plus {
-        display: none;
-    }
-
-    .ac_element:hover > .ac_title > .ex {
-        display: block;
+        transform: rotate(45deg);
     }
 
     .accordion:hover > .btn * p {
